@@ -29,10 +29,15 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  increaseUpvote(isIncreaseUpvote, index) {
+    if(isIncreaseUpvote){
+      this.quotes[index].numberOfUpvote += 1;
+    }
+  }
   
   increaseDownvote(isIncreaseDownvote, index) {
     if(isIncreaseDownvote){
-      this.quote[index].numberOfDownvote += 1;
+      this.quotes[index].numberOfDownvote += 1;
     }
   }
 
