@@ -1,1 +1,4 @@
-<p>quote-details works!</p>
+<p>This Quote was submitted by {{quote.fullname}}. <span class="text-muted">{{quote.createdDate | timePassed}}</span> has passed since it was created</p>
+<button class="btn btn-success float-left" (click)='increaseUpvote()'>Upvote {{quote.numberOfUpvote}}</button>
+<button class="btn btn-warning ml-2" (click)='increaseDownvote()'>Downvote {{quote.numberOfDownvote}}</button>
+<button class="btn btn-danger ml-2" (click)='quoteDelete(true)'>Delete Quote</button>
